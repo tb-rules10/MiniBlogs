@@ -1,0 +1,23 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+
+<div class="add-newblog">
+        <h1 style="text-align: center;">Add a Blog</h1>
+        <hr>
+        <form action="/allblogs" method="post">
+            <section>
+                <label for="title">Blog TItle:</label>
+                <input type="text" class="form-control" id="title" placeholder="Title" name="title">
+            </section>
+            <section><br>
+                <label for="content">Blog Text:</label>
+                <br>
+                <textarea id="content" class="form-control" cols="30" rows="10" name="content" placeholder="Blog Text"></textarea>
+            </section>
+            <button class="btn btn-success save-btn">Done</button>
+        </form>
+
+</div>
+
+<%- include('partials/footer')%>

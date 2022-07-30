@@ -1,0 +1,25 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+
+<div>
+    <div class="blogBYid">
+        <h1 class="blog-head head-editor"><b><%= blog.title %></b></h1>
+    </div>
+    <br>
+
+        <form method="POST" action="/allblogs/<%=blog.num%>?_method=PATCH">
+            <textarea name="blog" class="form-control" id="exampleFormControlTextarea4" cols="150" rows="20"><%= blog.content %></textarea>
+            
+            <button class="btn btn-success save-btn">Save</a></button>
+        </form>
+
+
+    <!-- <form method="POST" action="/allblogs/<%=blog.num%>?_method=PATCH">
+        <textarea name="blog" class="form-control" id="exampleFormControlTextarea4" cols="150" rows="20"><%= blog.content %></textarea>
+        
+        <button type="button" class="btn btn-success save-btn" style="margin-top:.5vhpx;">Save</a></button>
+    </form> -->
+</div>
+
+<%- include('partials/footer')%>

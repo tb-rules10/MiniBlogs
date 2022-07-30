@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+*{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav-color{
+    color: #FFFFFF;
+}
+
+body{
+    background-color: #e9e5db;
+    /* background-color: #F1F1F1; */
+}
+
+h2{
+    /* font-family: 'Quicksand', sans-serif; */
+    font-weight: bold;
+}
+
+h1.blog-head{
+    /* font-family: 'Montserrat', sans-serif; */
+    font-weight: 800;
+    transition: 1s ease-in;
+}
+
+hr{
+    border-style: dotted none none;
+    width: 5%;
+    border-color: #b0b0b0;
+    border-width: 7px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.blogbody{
+    width: 80vw;
+    margin: 2vh 8vw 10px 8vw;
+    
+}
+.container-fluid,.navbar{
+    margin: 0;
+    padding: 0;
+    
+}
+.container-fluid{
+    margin: 2vh 4vw;
+}
+
+.home,.allblogs,.blogBYid,.add-newblog{
+    margin-top: 3vh;
+}
+.nav-item{
+    margin: 0 .8vw;
+    
+}
+.mid-nav{
+    margin-left: .5vw;
+}
+
+
+.blog-image{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 700px;
+    height: auto;
+    margin-bottom: .5rem;
+}
+
+.blog-sub-head{
+    color: black;
+}
+
+.blog-box{
+    margin-bottom: 3vh;
+}
+
+.blog-shortform:hover{
+    box-shadow: 1px 5px 8px 1px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.blog-shortform{
+    margin: 0;
+    padding: 5px 10px 2px 10px;
+}
+
+.blog-featured{
+    padding-bottom: .5vh;
+    padding-top: .5vh;
+}
+
+.btn-blogid{
+    display: flex;
+    justify-content: space-between;
+}
+a.editdel {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+a.editdel, a.editdel:hover, a.editdel:focus, a.editdel:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.save-btn{
+    margin-top: 1.8vh;
+    margin-bottom: 0.1vh;
+}
+
+.head-editor{
+    margin-bottom: 0;
+}
+

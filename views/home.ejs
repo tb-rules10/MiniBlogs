@@ -1,0 +1,23 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+
+<div class="allblogs">
+    <h1 style="text-align: center;">Home</h1>
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus neque, unde veniam molestiae accusantium reprehenderit at voluptatum adipisci, similique facere veritatis voluptatibus pariatur quidem maxime impedit exercitationem repudiandae fugiat quas ratione dolore saepe officiis. Molestias repellendus nihil laboriosam et quos, nam nisi aspernatur, similique, eveniet eligendi incidunt tempora? Rerum, accusantium?</p> -->
+
+    <hr>
+
+    <!-- <h1>Highlighted</h1> -->
+</div>
+    <% for(let c of blogs) {%>
+        <div class="blog-shortform">
+            <h2><%= c.title %> </h2>
+            <p><%= c.content.split(' ').slice(0, 40).join(' ') %>... <a href="/allblogs/<%= c.num %>">(more)</a></p>
+        </div>
+        </br>
+    <% }%>
+
+
+<%- include('partials/footer')%>

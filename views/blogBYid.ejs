@@ -1,0 +1,42 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+
+<div class="blog-box">
+    <div class="blogBYid">
+        <h1 class="blog-head"><b><%= blog.title %></b></h1>
+    </div>
+    <br>
+    <% const arr =blog.content.split('\n') %>
+    <%for(c in arr){%>
+        <% if(arr[c].charAt(0) === '-') {%>
+        <b class="blog-sub-head"><%= arr[c].substring(1,arr[c].length) %></b>
+        <% }else if (arr[c].charAt(0) === '*') { %>
+            <div class="blog-image">
+                <img src="<%= arr[c].substring(1,arr[c].length) %>" class="blog-image" alt="blog-image">
+            </div>
+        <% }else{ %>
+        <p><%= arr[c] %></p>
+    <%}}%>
+    <div class="btn-blogid">
+        <button type="button" class="btn btn-primary"><a class="editdel" href="/allblogs/<%= blog.num%>/edit">Edit Blog</a></button>
+        <form method="POST" action="/allblogs/<%= blog.num %>?_method=DELETE">
+            <button class="btn btn-danger del-btn">Delete Blog</button>
+        </form>
+    </div>
+</div>
+<!-- <script>
+    const delbtn = document.querySelector('.del-btn');
+    console.log(delbtn);
+    delbtn.addEventListener('click', sure);
+    async function sure() {
+        var result = confirm("Want to delete?");
+        if (result) {
+            
+        }else{
+            window.location.reload();
+        }
+    }
+</script> -->
+
+<%- include('partials/footer')%>

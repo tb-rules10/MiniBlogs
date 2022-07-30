@@ -1,0 +1,21 @@
+<%- include('partials/head')%>
+
+<%- include('partials/navbar')%>
+
+<div class="allblogs" >
+    <h1 style="text-align: center;">All Blogs</h1>
+
+    <hr>
+
+    <!-- <h1>Highlighted</h1> -->
+</div>
+    <% for(let c of blogs) {%>
+        <div class="blog-shortform">
+            <h2><%= c.title %> </h2>
+            <p><%= c.content.split(' ').slice(0, 40).join(' ') %>... <a href="/allblogs/<%= c.num %> ">(more)</a></p>
+        </div>
+        </br>
+    <% }%>
+
+
+<%- include('partials/footer')%>
