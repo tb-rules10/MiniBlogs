@@ -103,10 +103,10 @@ app.post('/search', (req, res) => {
     // console.log(req.body);
     const{search:s} = req.body;
     var found = []
-    console.log(s);
+    // console.log(s);
     var head = `Search results for: ${s}`;
     for(let blog of blogs){
-        console.log(blog);
+        // console.log(blog);
         if ((blog.title).includes(s)){
             // console.log('***********************');
             found.push(blog);
@@ -117,23 +117,9 @@ app.post('/search', (req, res) => {
         head = "Nothing Found";
 
     }
-    console.log(found);
+    // console.log(found);
     res.render('search', {found,head})  
 })
-
-
-// blogs = blogs.filter(c => c.num !== parseInt(1));
-// // console.log(blogs);
-// console.log(blogs);
-
-// var abcd = "hello i am me".toUpperCase;
-// if (("ME").includes("Me".toUpperCase)){
-//     console.log('***********************')
-// }
-
-// data = JSON.stringify(blogs);
-// blogs = blogs.filter(c => c.num !== 6)
-// console.log(blogs.filter(c => c[6] !== 6));
 
 app.listen(3000, () => {
     console.log("LISTENING ON PORT 3000")
