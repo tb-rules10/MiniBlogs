@@ -8,6 +8,6 @@
     "uuid": "^8.3.2"
   },
   "scripts":{
-    "start": "nodemon app.js"
+    "start": "nodemon -L app.js"
   }
 }
